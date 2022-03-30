@@ -1,0 +1,106 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, intial-scale=1">
+<title>SAIMAHAVIR FOODS || Home</title>
+<link rel="stylesheet" href="style2.css">
+
+ 
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body  onload='document.form1.text1.focus()'>
+    
+<div class="head">
+   <h1><a href="index.html">SAI MAHAVIR FOODS</a></h1>
+   <hr>
+</div>
+
+<div class="mid">
+    <img src="svg elements/shopping2.png" >
+    <h2>Review</h2>
+    <hr>
+    <form id="rev" name="form1" action="#">
+    <input type='text' name='text1' placeholder="ex.yourmail@gmail.com" id="gmail"><br/>
+    <textarea placeholder="ex. your review" id="review"></textarea><br>
+    <button type="submit" class="btn btn-primary" onclick="ValidateEmail(document.form1.text1)">send</button>
+    </form>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script>
+
+    function ValidateEmail(inputText)
+        {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(inputText.value.match(mailformat))
+        {
+        alert("Valid email address!");
+        document.form1.text1.focus();
+        fetch()
+        return true;
+        }
+        else
+        {
+        alert("You have entered an invalid email address!");
+        document.form1.text1.focus();
+        return false;
+        }
+        }
+
+    
+    function fetch(){
+        var gmail = document.getElementById("gmail").value
+        var  review = document.getElementById("review").value;
+        alert('sending message ');
+        smtpserver(gmail,review)
+        document.getElementById('rev').reset()
+     
+    }
+
+    function smtpserver(x,y){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Port : '587', 
+            Username : "guptasundaram7@gmail.com",
+            Password : "tdftrcwzvjusbeds",
+            To : `guptasundaram7@gmail.com`,
+            From : `${x}`,
+            Subject : "users review",
+            Body : `${y}`
+        }).then(
+        message => alert(message)
+        );
+        console.log("send your review");
+        }
+</script>
+<section class="foot">
+    <div class="con">
+        <h4>SHOP FOR</h4>
+        <p>Explore | Foods | Snacks | Wafers | Chakli | Kachori</p>
+        <h4>KEEP IN TOUCH WITH</h4>
+        <p><a href="https://www.instagram.com/saimahavirfoods/?hl=en" target="_blank"><i class="fa fa-facebook-official"></i></a>
+           <a href="https://twitter.com/saimahavirfoods" target="_blank"><i class="fa fa-twitter"></i></a>
+           <a href="https://www.instagram.com/saimahavirfoods/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+           <a href="https://www.youtube.com/channel/UCzKABbeseHEL0zJoLfbOh5A/?guided_help_flow=5" target="_blank"><i class="fa fa-youtube-play"></i></a></p>
+        <h4>Connect</h4>
+        <p><a href="tel:9967029015">Contact Us</a> | <a href="#">About Us</a> | Blog | <a href="#">Privacy Policy</a></p>
+        <h4>Shop Address</h4>
+        <p>Shop No. 6,Jawahar Estate Building,<br>
+            Jawahar Nagar Road No. 1,<br>
+            Near BMC Market, <br>
+            Mumbai - 400062.
+        </p>
+        <p>Telephone: <b><a href="tel:9967029015">+91-9967029015</a></b></p>
+    </div>
+        <div class="copy">
+            <i class="fa fa-copyright"></i> 
+            <a href="http://www.saimahavir.in">www.saimahavir.in</a> 
+            <P>All rights reserved.</P></div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, intial-scale=1">
+<title>SAIMAHAVIR FOODS || Home</title>
+<link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+   <!-- yxaszwbepmhczmas-->
+<div class="head">
+   <h1><a href="index.html">SAI MAHAVIR FOODS</a></h1>
+</div>
+
+<div class="mid">
+    <h2>Information</h2>
+    <hr>
+    <p><i class="fa fa-phone-square"></i> 9967029015 / 8087736382</p>
+    <p><i class="fa fa-envelope"></i> saimahavirfoods@gmail.com</p>
+    <p><i class="fa fa-building"></i> Shop No. 06, Jawahar Nagar Road No.1, Goregaon (West), Mumbai/p>
+    <h2>Contact Us</h2>
+    <hr>
+    <form action="#" method="#" id="rev">
+    <input type="mail" placeholder="ex.yourmail@gmail.com" id="mail"><br>
+    <input ype="number" placeholder="ex.your numer" id="number"><br>
+    <textarea placeholder="ex. your message" id="message"></textarea><br>
+    <button type="submit" class="btn btn-primary" onclick="fetch()">send</button>
+</form>
+</div>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+
+    function fetch(){
+        console.log("fetchn");
+        var mail = document.getElementById("mail").value
+        var  contact = document.getElementById("number").value;
+        var  message = document.getElementById("message").value;
+        smtpserver(mail,contact,message)
+        document.getElementById('rev').reset()
+    }
+
+    function smtpserver(x,y,z){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Port : '587', 
+            Username : "guptasundaram7@gmail.com",
+            Password : "tdftrcwzvjusbeds",
+            To : `guptasundaram7@gmail.com`,
+            From : `${x}`,
+            Subject : `Hi,I am ${x}`,
+            Body : `contact no: ${y}<br/>
+            message : ${z}`
+        }).then(
+        message => alert(message)
+      
+        );
+        }
+</script>
+<section class="foot">
+    <div class="con">
+        <h4>SHOP FOR</h4>
+        <p>Explore | Foods | Snacks | Wafers | Chakli | Kachori</p>
+        <h4>KEEP IN TOUCH WITH</h4>
+        <p><a href="https://www.instagram.com/saimahavirfoods/?hl=en" target="_blank"><i class="fa fa-facebook-official"></i></a>
+           <a href="https://twitter.com/saimahavirfoods" target="_blank"><i class="fa fa-twitter"></i></a>
+           <a href="https://www.instagram.com/saimahavirfoods/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+           <a href="https://www.youtube.com/channel/UCzKABbeseHEL0zJoLfbOh5A/?guided_help_flow=5" target="_blank"><i class="fa fa-youtube-play"></i></a></p>
+        <h4>Connect</h4>
+        <p><a href="tel:9967029015">Contact Us</a> | <a href="#">About Us</a> | Blog | <a href="#">Privacy Policy</a></p>
+        <h4>Shop Address</h4>
+        <p>Shop No. 6,Jawahar Estate Building,<br>
+            Jawahar Nagar Road No. 1,<br>
+            Near BMC Market, <br>
+            Mumbai - 400062.
+        </p>
+        <p>Telephone: <b><a href="tel:9967029015">+91-9967029015</a></b></p>
+    </div>
+        <div class="copy">
+            <i class="fa fa-copyright"></i> 
+            <a href="http://www.saimahavir.in">www.saimahavir.in</a> 
+            <P>All rights reserved.</P></div>
+    </div>
+</section>
+</body>
+</html>

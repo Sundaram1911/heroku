@@ -1,0 +1,1052 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, intial-scale=1">
+<title>SAIMAHAVIR FOODS || Home Dryfruits,Wafers,Chakli and much more .... mumbais best snacks are available.</title>
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="client.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="mainload">
+	<div class="loader-wrapper"> 
+		<span class="loader"></span>
+	</div>
+</div>
+
+	<div class="app">
+			<a href="https://api.whatsapp.com/send?phone=919967029015&text=Hi" target="_blank">
+			<img src="images/logo1.png"></a>
+	</div>
+	<!--<div  id="EPsign">
+<div class="holder">
+		<img src="blocks/logo.png"><br>
+		<h1 href="#">Sign Up</h1>
+		<input type="text" class="form-control" id="semail" required>
+		<input type="text" class="form-control" id="spassword" required>
+		<button type="submit" class="btn btn-primary" onclick="signUp()">Sign Up</button>
+</div>
+<div class="holder">
+	<h1>Sign In</h1>
+	<input type="text" class="form-control" id="signemail" required>
+	<input type="text" class="form-control" id="signpassword" required>
+	<button type="submit" onclick="signIn()">Sign In</button>
+  <button onclick="signOut()">Sign Out</button>
+</div>
+</div>
+-->
+
+	<!-- Authentication!
+	<section class="auth" >
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header" style="letter-spacing: 1px;">SAI MAHAVIR</div>
+						<div class="card-body">
+							<input type="radio" id="summer" onclick="authc()" name="auth"><a href="#" >Create an account</a><br>
+							<span id="signxup">
+							<input type="text" placeholder="Enter your valid email"  id="semail" required ><br>
+							<input type="text" placeholder="Set password"  id="spassword" required><br>
+							<button type="submit" class="btn btn-primary" onclick="signUp()">Sign Up</button>
+							</span>
+							<input type="radio" id="winter" onclick="auths()" name="auth"><a href="">Sign In</a><br>
+							<span id="signxin">
+							<input type="text" placeholder="Enter email address" id="signemail" required><br>
+							<input type="text" placeholder="Enter your password" id="signpassword" required><br>
+							<button type="submit" class="btn btn-primary" onclick="signIn()">Sign In</button>
+							</span>
+					
+							<input type="radio" id="rain" onclick="authr()" name="auth"><a href="#" >
+							Sign In using Mobile Number</a><br>
+							
+							<button class="btn btn-primary" id="ex">Continue</button>
+							
+							<div class="text-muted"><input type="checkbox" required> By Continuing you agree to 
+								Sai Mahavir Conditions of use and <a href="privacypolicy.html">Privacy Policy</a></div>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section> -->
+<!-- select add address!-->
+
+
+<section class="payment">
+	<h5 onclick="paymentclose()">Back</h5>
+	
+	<div class="upi">
+		<marquee width="98%" direction="left" height="auto" padding="10px 0px">
+			online mode of payment gateway not available at this time due to under process, comming shortly. You can place order by clicking on purchase button using cash on delivery mode 
+		</marquee>
+		
+		<h2>Payment</h2>
+		
+		<a href="#" >UPI</a>
+		<a href="#">WALLET</a>
+		<a href="#">DEBIT/CREDIT CARD</a>
+		<a href="#">NET BANKING</a>
+		<a href="#">CASH ON DELIVERY</a>	
+	</div>
+	<div class="cash">
+		<form >
+			<h2>Cash On Delivery</h2><br>
+			<p>online mode of payment is now disable due to under process</p>
+			<span class="payment-flex">
+				<p>Final Amount</p>
+				<span class="pay-total-price">00</span>
+			</span><br>
+			<span class="payment-flex">
+				<p>Cash Collection Charges</p>
+				<span class="pay-collection-price">00</span>
+			</span><br>
+			<span class="payment-flex">
+				<p>Total Payable Amount</p>
+				<span class="pay-sum-price">00 </span>
+			</span><br>
+			<span class= "date-time"></span>
+			<span><button type="submit" class="btn btn-purchase" style="margin-top: 10px;">Purchase</button></span>
+		</form>
+	</div>
+	
+</section>
+
+<section class="fetch">
+
+<div class="orderdetails_holder">
+	<h5 onclick="hidecart()">Back</h5>
+	<!--<form id="catch">
+	<h2>Enter your Order ID</h2>
+	<input type="number" id="fetchorderid" placeholder="Enter Your Valid Order Id (numbers only)"><br>
+	<p style="padding-left:10px;">please check your email for past order details</p>
+	<button type="submit" class="btn btn-primary" id="fetchdata">submit</button>
+	</form>-->
+	
+</div>
+</section>
+<!-- users cart block !-->
+<section class="addtocart">
+ 			<h5><span>cart</span>  <i class="fa fa-angle-right"></i> 
+				<span class="no-item"> 0 items </span> <i class="fa fa-angle-right"></i> <span class="back" onclick="hidecart()">back</span></h5>
+ 			<div class="add">
+				<form id="ad-address">
+					<i class="fa fa-times" onclick="addressclose()"></i><br>
+					<h1>Ship to,</h1> 
+					<h6>Delivery Information</h6>
+	
+					<input type="text" name="name" placeholder="* Receiver's name" id="add_rc" required><br/>
+					<input type="email" name="name" placeholder="* Receiver's email" id="add_email" required><br/>
+					<input type="number" placeholder="* Phone number" id="add_contact" required>
+					<input type="number"  placeholder="ALternate phone number" id="add_alter"><br/>
+					
+					<h6>Address</h6>
+					<input type="number" placeholder="* Zip code" id="add_zip" required><br>
+					<input type="text" placeholder="* Address" id="add_add" required><br>
+					<input type="text" placeholder="Locality" id="add_local"><br>
+					<input type="text" placeholder="Landmark" id="add_lan"><br>
+					<input type="text" id="st" placeholder="State" required><input type="text" id="ci" placeholder="City" required><br>
+
+
+					<button type="submit" id="save" class="btn btn-primary">Save</button>
+				</form>
+			</div>
+ 			<div class="cart">
+	            <div class="cart-items">
+					<span class="imgc"><img src="https://sethisbakery.com/assets/website/images/empty-cart.png" ></span>
+	            </div>
+
+				<div class="custom-add">	
+					<div class="address_holder">
+						
+					</div>						
+				</div>
+
+	            <div class="cart-total">
+	            	<h2>PRICE SUMMARY</h2>
+	            	<label><sapn class="inc1">Delivery Fee</sapn> &#8377 <span class="incp"> 00</span></label>
+	            	<label><sapn class="inc1">Bag Discount</sapn> &#8377 <span class="incd"> 00</span></label>
+	            	<label><sapn class="inc1">Sub Total</sapn>  &#8377 <span class="incs"> 00</span></label>
+	            	<p>you are saving <span class="incd"> 00</span> on this order</p>
+	            	<span class="cart-flex">
+	            	<div class="car">
+	                <strong class="cart-total-title">Total</strong><br>
+	                <label>&#8377<span class="cart-total-price">00</span></label>
+	            	</div>
+	            	<div class="cont">
+						
+						<a href="./login.html"><button class="btn btn-notify">please sign in to place order</button></a>
+	            		<button class="btn btn-address" onclick="address()">Add Address</button>
+						<button class="btn btn-view-address" onclick="view()">View address</button>
+	            		<button class="btn btn-payment" onclick="payment()">Add Payment</button>
+
+	            	</div>
+	            	</span>
+	            </div>
+				
+        	</div>
+        	 
+           
+</section>
+
+
+
+
+<section class="topxx" id="insta">
+<div class="top-nav-bar">
+	<div class="search-box">
+		<div class="name" onclick="hidecart(0,1,2,3,4,5,6)">
+			<strong>SAI MAHAVIR</strong>
+		</div>
+	</div>
+
+		<i class="fa fa-bars" id="menu-btn" onclick="openNav()"></i>
+		<i class="fa fa-times" id="close-btn" onclick="closeNav()"></i>
+		<span id="hiddencart"><i class="fa fa-shopping-bag" onclick="displaycart()"></i><span class="item_number">0</span></span>
+		<div class="nav">
+		<div class="nav001">
+			<a href="#" onclick="hidecart(0,1,2,3,4,5,6)">Home</a>
+			<a href="#" onclick="products(0,1,2,3,4,5,6)"> Products</a>
+			<a href="#" onclick="displayorder()">My Orders</a>
+			<a href="review.html"> Review</a>
+			<a href="#"><i class="fa fa-shopping-bag" onclick="displaycart()"></i><span class="item_number">0</span></a>
+			<a href="./login.html"><button class="btn btn-primary"><i class="fa fa-sign-in"></i> SIGN IN</button></a>
+			
+		</div>
+	</div>
+</div>
+</section>
+
+ 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: #a45c40;">&times;</a>
+  <a href="#" id="userdetails"></a>
+  <div id="uid"></div>
+  <a href="#" onclick="hidecart(0,1,2,3,4,5,6)"><i class="fa fa-home"></i> Home</a>
+  <a href="#" onclick="products(0,1,2,3,4,5,6)"><i class="fa fa-list-alt"></i> Products</a>
+  <a href="#" onclick="displayorder()"><i class="fa fa-shopping-bag"></i> My Orders</a>
+  <a href="contactus.html"><i class="fa fa-phone"></i> Contact Us</a>
+  <a href="review.html"><i class="fa fa-commenting-o"></i> Review</a>
+  <a href="privacypolicy.html"><i class="fa fa-user-secret"></i> Privacy Policy</a>
+  <a href="#" onclick="signOut()" class="btn-sign-out"><i class="fa fa-sign-out"></i> Logout</a>
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "320px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+</script>
+
+<span class="rest">
+<section class="mainslide" >
+	
+
+</section>
+<p id="loc" onclick="Toggle()"><i class="fa fa-map-marker"></i> please enter the pincode to check delivery status.</p>
+<div class="cat">
+	<div class="pro1"><img src="originals/cropped-Home_Made_Logo__1_-removebg-preview-3.png" onclick="products(3,0,1,2,4,6,5)" alt="..."><br/><p>RK Home Made Syrup</p></div>
+	<div class="pro1"><img src="blocks/WhatsApp Image 2021-08-26 at 11.33.46 AM.jpeg"  onclick="products(5,0,1,2,3,4,6)" alt="..."><p>Sai Mahavir Foods</p></div>
+	<div class="pro1"><img src="originals/pista.jpg"  onclick="products(6,0,1,2,3,4,5)"><p>Special Dryfruits</p></div>
+	<div class="pro1"><img src="https://chhedaspecialities.com/sites/all/themes/adaptivetheme/at_subtheme/images/logo-chedda.png"  onclick="products(2,0,1,3,4,5,6)"><p>Chheda's Namkeen</p></div>
+</div>
+<div id="pincode">
+	<p style="font-weight: bold; margin: 5px 0px 0px 5px;">Choose your location <span onclick="Togglehide()"style="padding-left: 20px; font-size: 20px;">&times;</span></p>
+	<p style="font-size: 14px; margin: 5px 0px 0px 5px;">Select a delivery location to see product availability and delivery options</p>
+	<a href="./login.html"><button class="btn btn-addresses">please sign in your addresses</button></a>
+	<button class="btn btn-addproduct" onclick="products(5,0,1,2,3,4,6)">Add product to your cart</button>
+	<p style="font-size: 16px; margin: 5px 0px 10px 5px; color: #0099e3;"> <i class="fa fa-map-marker"></i> enter an indian pincode </p>
+	<input type="text" class="form-control" id="pin" placeholder="enter pincode">
+	<div class="alert alert-danger mt-2 mb-0">sorry we cannot delivery to this pincode.</div>
+	<div class="alert alert-success mt-2 mb-0">Yes, we deliver to this address.</div>
+	<button class="btn btn-add " onclick="pincode()">Apply</button>
+</div>
+<script>
+
+</script>
+<section class="slider-con">
+	<div class="slider">
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+	  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	</ol>
+	<div class="carousel-inner">
+	  <div class="carousel-item active">
+		<img class="d-block w-100" src="blocks/20210417_174704_0000.png" alt="First slide">
+		<div class="carousel-caption">
+			<h5>Check out variety of wafers and namkeens.</h5>
+			<p>SAI MAHAVIR</p>
+		  </div>
+	  </div>
+	  <div class="carousel-item">
+		<img class="d-block w-100" src="blocks/st1.png" alt="Second slide">
+		<div class="carousel-caption">
+			<h5>visit the shop</h5>
+			<p>SAI MAHAVIR</p>
+		  </div>
+	  </div>
+	</div>
+  	</div>
+	</div>
+	
+	<div class="list">
+	<div class="listchild1"><img src="svg elements/shopping2.png"></div>
+	<div class="listchild2">
+		<h2 style="color: #000; padding: 0px;margin: 10px 10px 0px 10px;">Welcome !</h2>
+		<p style="color: #222; padding: 0px;margin: 5px 10px;">sign in for your best<br/> experience</p>
+		<a href="login.html" style="color: #222; padding: 0px;margin: 0px 0px 10px 10px;"> <button class="btn btn-primary mt-4">sign in securely</button></a>
+	</br>
+		<a href="./login.html" style="padding-left:12px ;">create an account</a>
+	</div>
+	<div class="listchild2">
+		<h2 style="color: #000; padding: 0px;margin: 10px 10px 0px 10px;">Welcome <br/><p id="loggeduser"></p></h2>
+		<p style="color: #222; padding: 0px;margin: 5px 10px;">successfully logged in<br/> Thank You.</p>
+		 <button class="btn btn-primary mt-2 ml-2" onclick="products(5,0,1,2,3,4,6)">Add Products</button>
+	</div>
+	</div>
+</section>
+<!--?xml version="1.0" standalone="no"?-->             
+<!--<section class="fauth">
+	<div class="container">
+		<input type="number" placeholder="enter your phone number" name="phone" id="phoneno"><br/>
+		<input type="number" placeholder="enter your otp" name="phone" id="otpno"><br/>
+		<div id="recaptcha-container"></div>
+		<button id="Loginphone">Log In With OTP</button>
+		<button type="submit" id="verifyotp">Verify</button>
+	</div>
+</section>
+<table class="table table-hover">
+	<thead>
+	  <tr>
+		<th scope="col">no</th>
+		<th scope="col">name</th>
+		<th scope="col">stock</th>
+		<th scope="col">quantity</th>
+		<th scope="col">price</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+		<th scope="row"><img style="width: 100px;height: 100px;border: 1px solid #ccc;" src="images/besan.png" class="card-img-top" alt="..."></th>
+		<td><h5 class="card-title">Potato Chilli Rifle</h5></td>
+		<td>In stock +</td>
+		<td><span class="card-weight"> 500gm</span></td>
+		<td><p>&#8377<span class="card-price"> 80</span> <span>&#8377</span><del class="del"> 120</del><br/></td>
+		<td><span class="btn btn-primary shop-item-button mt-2">Add to cart</span></td>
+	  </tr>
+	  <tr>
+		<th scope="row"><img style="width: 100px;height: 100px;border: 1px solid #ccc;" src="images/besan.png" class="card-img-top" alt="..."></th>
+		<td><h5 class="card-title">Potato Chilli Rifle</h5></td>
+		<td>In stock +</td>
+		<td><span class="card-weight"> 500gm</span></td>
+		<td><p>&#8377<span class="card-price"> 80</span> <span>&#8377</span><del class="del"> 120</del><br/></td>
+		<td><span class="btn btn-primary shop-item-button mt-2">Add to cart</span></td>
+	  </tr>
+	 
+	</tbody>
+  </table>--->
+<h3>Featured Products</h3>
+<div class="row1 reveal">
+	<div id="check">
+			<div class="card">
+			  <img src="images/besan.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Besan Papdi</h5>
+			    <p>&#8377<span class="card-price"> 80</span> <span>&#8377</span><del class="del"> 120</del><br/>
+					weight :<span class="card-weight"> 500gm</span></p>
+			    <p class="card-text">available <span class="stk"> +In Stock</span></p>
+			    <span class="btn btn-primary shop-item-button mt-2">Add to cart</span>
+			  </div>
+			</div>
+		
+			<div class="card">
+			  <img src="images/golchakli.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Bhajni Chakli</h5>
+			    <p>&#8377<span class="card-price"> 90</span> <span>&#8377</span><del class="del"> 110</del><br/>
+					weight :<span class="card-weight"> 500gm</span></p> 
+				<p class="card-text">available <span class="stk"> +In Stock</span></p>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+				
+			  </div>
+			</div>
+		
+			<div class="card">
+			  <img src="images/rifle.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Potato Chilli Rifle</h5>
+			     <p>&#8377<span class="card-price"> 120</span> <span>&#8377</span><del class="del"> 160</del><br/>
+					weight :<span class="card-weight"> 500gm</span></p> 
+				 <p class="card-text">available <span class="stk"> +In Stock</span></p>
+			    <span class="btn btn-primary  shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		
+			<div class="card">
+			  <img src="images/tikhamix.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Tikha Mixture</h5>
+			     <p>&#8377<span class="card-price"> 80</span> <span>&#8377</span><del class="del"> 100</del><br/>
+					weight :<span class="card-weight"> 500gm</span></p> 
+				 <p class="card-text">available <span class="stk"> +In Stock</span></p>
+			    <span class="btn btn-primary  shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+			
+		</div>
+</div>
+
+<section class="website-features reveal">
+	<h1>
+		When I shop, the world shows signs of improvement, and the world is better, yet then it’s not, and I have to do it once more
+		Love for shopping never ends Every day is a shopping day.<br/>
+	<i class="fa fa-facebook-official" style="font-size: 25px; padding: 10px;"></i>
+	<i class="fa fa-instagram"  style="font-size: 25px; padding: 10px;"></i>
+	<i class="fa fa-whatsapp"  style="font-size: 25px; padding: 10px;"></i>
+	<i class="fa fa-twitter"  style="font-size: 25px; padding: 10px;"></i></h1>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+		<path fill="#0099ff" fill-opacity="1" d="M0,128L80,122.7C160,117,320,107,480,128C640,149,800,203,960,213.3C1120,224,1280,192,1360,176L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+		<path fill="#0099ff" fill-opacity="1" d="M0,128L80,122.7C160,117,320,107,480,128C640,149,800,203,960,213.3C1120,224,1280,192,1360,176L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+	
+	
+	<div class="container">
+	<h3>Features</h3>
+	<div class="row">
+	<div class="col-md-4 feature-box">
+		<i class="fa fa-truck"></i>
+	<div class="feature-text">
+		<p><b>Get Free Delivery For Every</b><br />order on more than 299 &#8377</p>
+	</div>
+	</div>
+
+	<div class="col-md-4 feature-box">	
+	<i class="fa fa-exchange"></i>
+	<div class="feature-text">
+		<p><b>Return Within 48 Hours</b><br />of receiving order</p>
+	</div>
+	</div>
+	<div class="col-md-4 feature-box">
+	<i class="fa fa-star"></i>
+	<div class="feature-text">
+		<p><b>Variety in snacks and chips</b><br />are available at shop</p>
+	</div>
+	</div>
+	
+	<div class="col-md-4 feature-box">
+	<i class="fa fa-star"></i>
+	<div class="feature-text">
+		<p><b>Collect Your Order On The Shop</b><br />Delivery available Between Andheri to Borivali & Vasai to Virar.</p>
+	</div>
+	</div>
+	</div>
+	</div>
+</section>
+<section class="ads">
+	<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=sai0603-21&marketplace=amazon&amp;region=IN&placement=B08WJ12R6N&asins=B08WJ12R6N&linkId=745fdbe61567f635b864819d8c1c6b42&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+		</iframe>
+		<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=sai0603-21&marketplace=amazon&amp;region=IN&placement=B019F8LL8C&asins=B019F8LL8C&linkId=0e4dcbfebc818990780f1ef1a92a3733&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+		</iframe>
+		<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=sai0603-21&marketplace=amazon&amp;region=IN&placement=B07G9GDQJD&asins=B07G9GDQJD&linkId=f8eb1626bf6873eb8d9958ede1358a4b&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+		</iframe>
+	</section>
+<h3>Reviews</h3>
+<section class="reviews reveal" id="Reviews">
+	<section id="testimonials">
+        <!--heading--->
+        <!--testimonials-box-container------>
+        <div class="testimonial-box-container">
+            <!--BOX-1-------------->
+            <div class="testimonial-box">
+                <!--top------------------------->
+                <div class="box-top">
+                    <!--profile----->
+                    <div class="profile">
+                        <!--img---->
+                        <div class="profile-img">
+                            <img src="reviews/icon-for-customer-20.jpg" />
+                        </div>
+                        <!--name-and-username-->
+                        <div class="name-user">
+                            <strong>Abhishek Mishra</strong>
+                            <span>@abhishek</span>
+                        </div>
+                    </div>
+                    <!--reviews------>
+                    <div class="reviews">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i><!--Empty star-->
+                    </div>
+                </div>
+                <!--Comments---------------------------------------->
+                <div class="client-comment">
+                    <p>banana wafers and fanas wafers i tried, taste is better.
+						quality foods and snacks are there.must visit to the shop.</p>
+                </div>
+            </div>
+            <!--BOX-2-------------->
+            <div class="testimonial-box">
+                <!--top------------------------->
+                <div class="box-top">
+                    <!--profile----->
+                    <div class="profile">
+                        <!--img---->
+                        <div class="profile-img">
+                            <img src="reviews/WhatsApp Image 2021-08-16 at 11.11.40 PM.jpeg" />
+                        </div>
+                        <!--name-and-username-->
+                        <div class="name-user">
+                            <strong>Amit Mishra</strong>
+                            <span>@amit</span>
+                        </div>
+                    </div>
+                    <!--reviews------>
+                    <div class="reviews">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i><!--Empty star-->
+                    </div>
+                </div>
+                <!--Comments---------------------------------------->
+                <div class="client-comment">
+                    <p>excellent farsan. I understand the owner is not a 
+						gujarati but a North Indian!Their USP oil and ingredients 
+						used are so good that their products do not smell even 
+						after weeks of storage. Prices are the Reasonable..Keep it up!.</p>
+                </div>
+            </div>
+            <!--BOX-3-------------->
+            <div class="testimonial-box">
+                <!--top------------------------->
+                <div class="box-top">
+                    <!--profile----->
+                    <div class="profile">
+                        <!--img---->
+                        <div class="profile-img">
+                            <img src="reviews/IMG_20200224_163003_858.jpg" />
+                        </div>
+                        <!--name-and-username-->
+                        <div class="name-user">
+                            <strong>Vaibhav Parab</strong>
+                            <span>@vaibhav</span>
+                        </div>
+                    </div>
+                    <!--reviews------>
+                    <div class="reviews">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i><!--Empty star-->
+                    </div>
+                </div>
+                <!--Comments---------------------------------------->
+                <div class="client-comment">
+                    <p>Good support and better quality..</p>
+                </div>
+            </div>
+            <!--BOX-4-------------->
+            <div class="testimonial-box">
+                <!--top------------------------->
+                <div class="box-top">
+                    <!--profile----->
+                    <div class="profile">
+                        <!--img---->
+                        <div class="profile-img">
+                            <img src="reviews/icon-for-customer-20.jpg" />
+                        </div>
+                        <!--name-and-username-->
+                        <div class="name-user">
+                            <strong>Arvind Chaurasiya</strong>
+                            <span>@arvind</span>
+                        </div>
+                    </div>
+                    <!--reviews------>
+                    <div class="reviews">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i><!--Empty star-->
+                    </div>
+                </div>
+                <!--Comments---------------------------------------->
+                <div class="client-comment">
+                    <p>the taste of the motas potato wafer is really good.
+						prices are acceptable. try Masti besan papdi recommended..</p>
+                </div>
+            </div>
+        </div>
+      </section>
+			
+</section>
+</span>
+
+<section class="products">
+	<p><span onclick="returnhome(0,1,2,3,4,5,6)">Home </span> > Products</p>
+	<!--<div class="row" >
+		<div class="col-md-4">
+			<div class="card">
+				<img src="originals/cropped-Home_Made_Logo__1_-removebg-preview-3.png" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">RK Homemade Syrup</h5>
+				  <div class="card-text">Rk homemade products are available at shop at discount price.</div>
+				  <span class="btn btn-primary" onclick="products(3,0,1,2,4,6,5)">view products</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-md-4">
+			<div class="card">
+				<img src="blocks/WhatsApp Image 2021-08-26 at 11.33.46 AM.jpeg" alt="...">
+				<div class="card-body">
+				<h5 class="card-title">Sai Mahavir Foods</h5>
+				<div class="card-text">all types of namkeens, farshan and etc.</div>
+				<span class="btn btn-primary" onclick="products(5,0,1,2,3,4,6)">view products</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+				<img src="originals/akhrot.jpg">
+				<div class="card-body">
+				<h5 class="card-title">Dryfruits</h5>
+				<div class="card-text">available</div>
+				<span class="btn btn-primary" onclick="products(6,0,1,2,3,4,5)">view products</span>
+				</div>
+			</div>
+		</div>
+</div>-->
+<div class="container-fluid">
+<div class="pro1"><img src="originals/cropped-Home_Made_Logo__1_-removebg-preview-3.png" onclick="products(3,0,1,2,4,6,5)" alt="..."></div>
+<div class="pro1"><img src="blocks/WhatsApp Image 2021-08-26 at 11.33.46 AM.jpeg"  onclick="products(5,0,1,2,3,4,6)" alt="..."></div>
+<div class="pro1"><img src="originals/akhrot.jpg"  onclick="products(6,0,1,2,3,4,5)"></div>
+</div>
+</section>
+<section class="products">
+	<p><span onclick="hidecart(0,1,2,3,4,5,6)"> Home </span> > <span onclick="products(0,1,2,3,4,5,6)">Products</span> > Haldiram Products</p>			
+</section>
+
+<section class="products">
+	<p><span onclick="hidecart(0,1,2,3,4,5,6)"> Home </span> > <span onclick="products(0,1,2,3,4,5,6)">Products</span> > Chedda's Products</p>
+</section>
+<section class="products">
+	<p><span onclick="hidecart(0,1,2,3,4,5,6)"> Home </span> > <span onclick="products(0,1,2,3,4,5,6)">Products</span> > RK Homemade Products</p>
+	<div class="row" >
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="originals/Kokam_Sharbat-removebg-preview-300x300.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Kokam Sharbat</h5>
+			    <p>&#8377<span class="card-price"> 170</span> <span>&#8377</span><del class="del"> 190</del></p>
+			    <p>Weight:<span class="card-weight"> 750 ml</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="originals/Masala_KAchi_Keri-removebg-preview-300x300.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Masala Kachi Keri</h5>
+			    <p>&#8377<span class="card-price"> 180</span> <span>&#8377</span><del class="del"> 200</del></p>
+			    <p>Weight:<span class="card-weight"> 750 ml</span></p> 
+				<div class="card-text">not available<span class="stk"> +In Stock</span></div>
+
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="originals/Pan_Pasand-removebg-preview-300x300.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Pan Pasand</h5>
+			    <p>&#8377<span class="card-price"> 240</span> <span>&#8377</span><del class="del"> 260</del></p>
+			    <p>Weight:<span class="card-weight"> 750 ml</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="originals/Lemon_Pudiana-removebg-preview-300x300.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Lemon Pudina</h5>
+			    <p>&#8377<span class="card-price"> 210</span> <span>&#8377</span><del class="del"> 260</del></p>
+			    <p>Weight:<span class="card-weight"> 750 ml</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="originals/Litchi_Crush-removebg-preview-300x300.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Litchi Crush</h5>
+			    <p>&#8377<span class="card-price"> 210</span> <span>&#8377</span><del class="del"> 260</del></p>
+			    <p>Weight:<span class="card-weight"> 750 ml</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="originals/Variyali_Elaichi-removebg-preview-300x300.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Variyali Elaichi</h5>
+			    <p>&#8377<span class="card-price"> 180</span> <span>&#8377</span><del class="del"> 260</del></p>
+			    <p>Weight:<span class="card-weight"> 750 ml</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		
+	</div>
+</section>
+<section class="products">
+	<p><span onclick="hidecart(0,1,2,3,4,5,6)"> Home </span> > <span onclick="products(0,1,2,3,4,5,6)">Products</span> Motas Products</p>
+</section>
+<section class="products">
+	<p><span onclick="hidecart(0,1,2,3,4,5,6)"> Home </span> > <span onclick="products(0,1,2,3,4,5,6)">Products</span> > Sai Mahavir Products</p>
+	<div class="row" >
+		
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/20210901_171926.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Classic Salted Potato Wafer</h5>
+			    <p>&#8377<span class="card-price"> 110</span> <span>&#8377</span><del class="del">160</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/20210901_172114.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Sweet Corn Chivra</h5>
+			    <p>&#8377<span class="card-price"> 70</span> <span>&#8377</span><del class="del">90</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/20210901_172853.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Tikha Sev</h5>
+			    <p>&#8377<span class="card-price"> 70</span> <span>&#8377</span><del class="del">140</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/20210901_173006.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Butter Chakli</h5>
+			    <p>&#8377<span class="card-price"> 100</span> <span>&#8377</span><del class="del"> 140</del></p>
+			    <p>weight: <span class="card-weight">5 Pc./20rs.</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/mixfarshan.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Mix Farshan Special</h5>
+			    <p>&#8377<span class="card-price"> 70</span> <span>&#8377</span><del class="del">90</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/sezwan.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Sezwan Chakli</h5>
+			    <p>&#8377<span class="card-price"> 70</span> <span>&#8377</span><del class="del"> 90</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/red.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Chilli Banana Wafer</h5>
+			    <p>&#8377<span class="card-price"> 120</span> <span>&#8377</span><del class="del"> 180</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/redtomato.jpeg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Red Banana Wafer</h5>
+			    <p>&#8377<span class="card-price"> 120</span> <span>&#8377</span><del class="del"> 180</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/blacklong.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Banana Wafer(Pepper Salted)</h5>
+			    <p>&#8377<span class="card-price"> 120</span> <span>&#8377</span><del class="del"> 180</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/yellow.jpeg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Yellow Kerla Wafer</h5>
+			    <p>&#8377<span class="card-price"> 140</span> <span>&#8377</span><del class="del"> 180</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/tikhamix.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Tikha Mixture</h5>
+			    <p>&#8377<span class="card-price"> 70</span> <span>&#8377</span><del class="del"> 90</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/khajur.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Khajur</h5>
+			    <p>&#8377<span class="card-price"> 100</span> <span>&#8377</span><del class="del"> 140</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/longb.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Bhakarwadi</h5>
+			    <p>&#8377<span class="card-price"> 60</span> <span>&#8377</span><del class="del"> 90</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/murkur.jpeg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Sada Murkur</h5>
+			    <p>&#8377<span class="card-price"> 60</span> <span>&#8377</span><del class="del"> 90</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/masala.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Chilli Peanut</h5>
+			    <p>&#8377<span class="card-price"> 100</span> <span>&#8377</span><del class="del"> 130</del></p>
+			    <p>weight: <span class="card-weight">500gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="images/butterchakli.jpg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Butter Chakli</h5>
+			    <p>&#8377<span class="card-price"> 100</span> <span>&#8377</span><del class="del"> 120</del></p>
+			    <p>weight: <span class="card-weight">5 Pc.</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="products">
+	<p> <span onclick="hidecart(0,1,2,3,4,5,6)"> Home </span> > <span onclick="products(0,1,2,3,4,5,6)">Products</span> > Special Dryfruits</p>
+	<div class="row" >
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="originals/badam.jpg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Badam</h5>
+			    <p>&#8377<span class="card-price"> 100</span> <span>&#8377</span><del class="del"> 120</del></p>
+			    <p>weight: <span class="card-weight">100 gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="originals/pista.jpg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Pista</h5>
+			    <p>&#8377<span class="card-price"> 120</span> <span>&#8377</span><del class="del"> 140</del></p>
+			    <p>Weight: <span class="card-weight">100 gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="originals/kaju.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Kaju</h5>
+			    <p>&#8377<span class="card-price"> 100</span> <span>&#8377</span><del class="del"> 120</del></p>
+			    <p>Weight: <span class="card-weight">100 gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="originals/akhrot.jpg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Akhrot</h5>
+			    <p>&#8377<span class="card-price"> 140</span> <span>&#8377</span><del class="del"> 160</del></p>
+			    <p>Weight: <span class="card-weight">100 gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="originals/kismish.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Kismish</h5>
+			    <p>&#8377<span class="card-price"> 30</span> <span>&#8377</span><del class="del"> 120</del></p>
+			    <p>Weight: <span class="card-weight">100 gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="card">
+			  <img src="originals/makhana.jpg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Makhana</h5>
+			    <p>&#8377<span class="card-price"> 80</span> <span>&#8377</span><del class="del"> 160</del></p>
+			    <p>Weight: <span class="card-weight">100 gm</span></p> 
+				<div class="card-text">available<span class="stk"> +In Stock</span></div>
+			    <span class="btn btn-primary shop-item-button">Add to cart</span>
+			  </div>
+			</div>
+		</div>
+	
+	</div>
+</section>
+
+
+<section class="gmap">
+	<h1>Locate Us
+	</h1>
+	
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.312735271414!2d72.84621975229997!3d19.163258938430126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7bee9d29dcd%3A0x96ab315bd11931be!2sSai%20Mahavir%20Foods!5e0!3m2!1sen!2sin!4v1645341467070!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+<section class="foot">
+		<div class="con">
+			<h4>SHOP FOR</h4>
+			<p>Explore | Foods | Snacks | Wafers | Chakli | Kachori</p>
+			<h4>KEEP IN TOUCH WITH</h4>
+			<p><a href="https://www.instagram.com/saimahavirfoods/?hl=en" target="_blank"><i class="fa fa-facebook-official"></i></a>
+			   <a href="https://twitter.com/saimahavirfoods" target="_blank"><i class="fa fa-twitter"></i></a>
+			   <a href="https://www.instagram.com/saimahavirfoods/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+			   <a href="https://www.youtube.com/channel/UCzKABbeseHEL0zJoLfbOh5A/?guided_help_flow=5" target="_blank"><i class="fa fa-youtube-play"></i></a></p>
+			<h4>Connect</h4>
+			<p><a href="tel:9967029015">Contact Us</a> | <a href="#">About Us</a> | Blog | <a href="#">Privacy Policy</a></p>
+			<h4>Shop Address</h4>
+			<p>Shop No. 6,Jawahar Estate Building,<br>
+				Jawahar Nagar Road No. 1,<br>
+				Near BMC Market, <br>
+				Mumbai - 400062.
+			</p>
+			<p>Telephone: <b><a href="tel:9967029015">+91-9967029015</a></b></p>
+		</div>
+			<div class="copy">
+				<i class="fa fa-copyright"></i> 
+				<a href="http://www.saimahavir.in">www.saimahavir.in</a> 
+				<P>All rights reserved.</P></div>
+		</div>
+</section>
+<script src="controlaccess.js"></script>
+</body>
+</html>
